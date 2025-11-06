@@ -1,0 +1,45 @@
+body {
+    background-color: aqua;
+    color: rgb(234, 230, 230);
+    font-family: sans-serif;
+}
+
+.image-overlay {
+    background-color: rgba(red, green, blue, alpha);
+    opacity: 0;
+    transition: all;
+}
+
+.image-container:hover.image-overlay {
+     opacity: 1;
+}
+
+.image-container:hover img {
+    transform: scale(1.1)
+}
+    
+    
+
+
+.main {
+    padding: 50px;
+  
+}
+
+header {
+    padding: 50px;
+    margin-bottom: auto;
+}
+
+footer {
+    padding: 100px;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 960px;
+    
+}
+.grid-container {
+    display: grid;
+}

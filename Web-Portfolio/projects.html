@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrew Gatun Projects</title>
+    <link rel="stylesheet" href="Style.css">
+</head>  
+<body>
+     <div class="grid-container">
+        <header class="sticky-header">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌙 Shadow Mode</button>
+        </header>
+
+        <main>
+            <h1>My Projects</h1>
+            <section class="project-gallery">
+                <article class="project-card">
+                    <h2>AndrewsProjects</h2>
+                    <div class="image-container">
+                        <img src="images/Ares 1.jpg" alt="Ares project image">
+                        <div class="image-overlay">
+                    </div>
+                     <p>Ares says "Bow".&darr;</p>
+                    <li><a href="AndrewsProjects.html">Secret page</a></li>
+                </article>
+                <article class="project-card">
+                    <h2>Ares</h2>
+                    <p>Tremble before me for I am the God of War.</p>
+                      <div class="image-container">
+                        <img src="images/Ares.jpg" alt="Ares picture">
+                        <div class="image-overlay">
+                            <p>View Project</p>
+                        </div>
+                    </div>
+                     <div class="image-container">
+                        <img src="images/god.jpg" alt= "Ares project image">
+                        <div class="image-overlay">
+
+                </article>
+                 <article class="project-card">
+                    <h2>Athena</h2>
+                    <div class="image-container">
+                        <img src="images/goddess.jpg" alt="Athena project image">
+                        <div class="image-overlay">
+                            <p>View Project</p>
+                        </div>
+                    </div>
+                    </article>
+                 <article class="project-card">
+                    <h2>Zeus</h2>
+                    <div class="image-container">
+                        <img src="images/Zeus.jpg" alt="Zeus project image">
+                        <div class="image-overlay">
+                            <p>View Project</p>
+                        </div>
+                    </div>
+                    
+   </article>
+      </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Andrew, Gatun</p>
+        </footer>
+    </div>
+    <script>
+        const toggleButton = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "Shadow") {
+            body.classList.add("Shadow");
+            toggleButton.textContent = "☀️ Sun Mode";
+        }
+
+        toggleButton.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("Shadow")) {
+                toggleButton.textContent = "☀️ Sun Mode";
+                localStorage.setItem("theme", "Shadow");
+            } else {
+                toggleButton.textContent = "🌙 Shadow Mode";
+                localStorage.setItem("theme", "Sun");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
+     
+    
+
+  

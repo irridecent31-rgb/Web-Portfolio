@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andrew Gatun Home</title>
+    <link rel="stylesheet" href="Style.css">
+</head>  
+<body>
+<header class="sticky-header">
+    <nav class="main-nav">
+       <div class="container">
+        <div class="grid-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+             </nav>
+        <button id="theme-toggle">🌙 Shadow Mode</button>
+    </header>
+
+    <main>
+        <h1>My Home</h1>
+        <p>Ive been in school for over a year.</p>
+
+        <aside>
+            <h3>About me</h3>
+            <p> Hi my name is Andrew Gatun and Im in the bachelor's program.</p>
+            <section>
+                <h2>Experience/h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Security</th>
+                            <th>Proficiency</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>Flexbox</td>
+                            <td>Beginner</td>
+                        </tr>
+                        <tr>
+                            <td>CSS Grid</td>
+                            <td>Beginner</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2025 Andrew, Gatun</p>
+    </footer>
+    </div>
+    <script>
+        const toggleButton = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "Shadow") {
+            body.classList.add("Shadow");
+            toggleButton.textContent = "☀️ Sun Mode";
+        }
+
+        toggleButton.addEventListener("click", () => {
+            body.classList.toggle("Shadow");
+
+            if (body.classList.contains("Shadow")) {
+                toggleButton.textContent = "☀️ Sun Mode";
+                localStorage.setItem("theme", "Shadow");
+            } else {
+                toggleButton.textContent = "🌙 Shadow Mode";
+                localStorage.setItem("theme", "Sun");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+    
